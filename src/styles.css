@@ -1,1 +1,77 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+body,html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.spacer {
+  flex-grow: 1;
+}
+
+
+/* fonts */
+.Lacquer {
+  font-family: 'Lacquer', sans-serif;
+}
+.Opensans {
+  font-family: 'Open Sans', sans-serif;
+}
+.Indie {
+  font-family: 'Indie Flower', cursive;
+}
+
+
+
+/* videogular */
+span.slider {
+  background: rgb(106,9,133) !important;
+  opacity: 1 !important;
+  z-index: 100;
+  transition-duration: 0.1s;
+}
+.scrubBar:hover .slider {
+  background: rgb(167, 15, 209) !important;
+  padding: 1px;
+  margin-top: -6px;
+  margin-left: -11px;
+}
+div.scrubBar {
+  background-color: rgba(221, 221, 221, 0.2);
+  outline: none;
+}
+vg-scrub-bar-current-time .background {
+  background: rgb(106,9,133) !important;
+}
+vg-volume div {
+  outline: none !important;
+}
+vg-play-pause .icon {
+  font-size: 35px !important;
+}
+vg-controls {
+  height: 70px;
+}
+vg-time-display span {
+  font-weight: 600;
+}
+
+
+
+
+
+
+.fb {
+  color: #3b5998;
+}
+.insta {
+  color: #e4405f;
+}
+.twitter {
+  color: #00acee;
+}
+.yt {
+  color: #c4302b;
+}

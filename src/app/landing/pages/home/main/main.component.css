@@ -1,0 +1,44 @@
+.container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  min-height: 100vh;
+  z-index: 100;
+  overflow: hidden;
+}
+#one {
+  position: absolute;
+  right: 0px;
+  height: 120vh;
+  z-index: 120;
+}
+#two {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 102vw;
+  min-height: 120vh;
+  z-index: 110;
+}
+
+#content {
+  position: relative;
+  z-index: 500 !important;
+  min-height: 1000px;
+  padding: 25vh 180px;
+  box-sizing: border-box;
+}
+
+#content h1 {
+  margin-bottom: 60vh;
+  font-size: 100px;
+  color: #333;
+  text-align: center;
+  width: 70%;
+}
+#content h1 span {
+  color: rgb(106,9,133);
+  text-shadow: 2px 7px #333;
+}

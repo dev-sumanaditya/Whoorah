@@ -1,0 +1,63 @@
+<div class="container">
+  <div class="player" id="player">
+    <vg-player #player (onPlayerReady)="onPlayerReady($event)">
+        <vg-overlay-play></vg-overlay-play>
+        <vg-buffering></vg-buffering>
+
+        <vg-scrub-bar [vgSlider]="true" style="z-index: 1000;">
+          <vg-scrub-bar-current-time [vgSlider]="true"></vg-scrub-bar-current-time>
+          <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
+        </vg-scrub-bar>
+
+        <vg-controls>
+          <vg-play-pause></vg-play-pause>
+          <vg-mute></vg-mute>
+          <vg-volume></vg-volume>
+          <div class="spacer"></div>
+          <vg-time-display *ngIf="!videoplayed" vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+          <vg-time-display *ngIf="videoplayed" vgProperty="left" vgFormat="mm:ss"></vg-time-display>
+
+          <vg-fullscreen></vg-fullscreen>
+        </vg-controls>
+        <video [vgMedia]="media" #media id="singleVideo" preload="auto" crossorigin>
+          <source src="http://static.videogular.com/assets/videos/videogular.mp4" type="video/mp4">
+        </video>
+    </vg-player>
+  </div>
+  <div class="info">
+    <h2>Ladki ka matter hai</h2>
+    <div class="spacer"></div>
+    <span>Download</span>
+    <i class="fa fa-download" aria-hidden="true"></i>
+  </div>
+  <p>This video is a satire on society's prejudices about women, and how they always assume the worst in every woman. We live in a world where if there's an unsettling situation, it's a girl who is always blamed for it, whether it is a situation where a woman is evolved or even those where it's not even about a woman but people always assume first that it's about a woman. This video hits hard on this mentality of our society in a comic and satirical way.</p>
+  <div class="socialicons">
+    <a href="/videos">
+      <i class="fa fa-facebook-official fb" aria-hidden="true"></i>
+    </a>
+    <a href="/videos">
+      <i class="fa fa-instagram insta" aria-hidden="true"></i>
+    </a>
+    <a href="/videos">
+      <i class="fa fa-twitter-square twitter" aria-hidden="true"></i>
+    </a>
+    <a href="/videos">
+      <i class="fa fa-youtube-play yt" aria-hidden="true"></i>
+    </a>
+  </div>
+
+  <div class="sliderContainer">
+    <h4>Keep Watching</h4>
+    <i class="fa fa-chevron-left navio nl" aria-hidden="true" (click)="slideBack()" *ngIf="slidePos !== 0"></i>
+    <i class="fa fa-chevron-right navio nr" aria-hidden="true" (click)="slideNxt()" *ngIf="slidePos < slideLenght"></i>
+    <div class="slider">
+      <div class="slide" [style.marginLeft.%]="slideMargin">
+        <div class="item" *ngFor="let i of dummy" [style.background]="'url(' + i + ')'">
+          <a href="/videos" class="overlay">
+            <i class="fa fa-play-circle-o" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
