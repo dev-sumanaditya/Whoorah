@@ -1,0 +1,207 @@
+.container {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar {
+  display: flex;
+  border-bottom: 2px solid #ddd;
+  box-sizing: border-box;
+  padding: 10px 20px 10px 40px;
+  align-items: center;
+}
+.section {
+  flex-grow: 1;
+  box-sizing: border-box;
+  display: flex;
+}
+.section .sidenav {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid grey;
+  box-sizing: border-box;
+}
+.section .content{
+  flex: 5;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.section .content .page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden scroll;
+}
+.section .content .page::-webkit-scrollbar
+{
+width: 6px;  /* for vertical scrollbars */
+}
+
+.section .content .page::-webkit-scrollbar-track
+{
+background: rgba(0, 0, 0, 0.4);
+}
+
+.section .content .page::-webkit-scrollbar-thumb
+{
+background: #6a0985;
+}
+
+.topbar .brand {
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+  cursor: pointer;
+  text-decoration: none;
+}
+.topbar .brand span {
+  color: #6a0985;
+  font-weight: 800;
+}
+
+.topbar .avatar {
+  display: flex;
+  align-items: center;
+  border: 2px solid rgba(221, 221, 221, 0.7);
+  padding: 5px 10px 5px 5px;
+  border-radius: 30px;
+  transition-duration: 0.3s;
+  cursor: pointer;
+  position: relative;
+}
+.topbar .avatar .img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 1px solid #6a0985;
+  overflow: hidden;
+  margin-right: 8px;
+  color: #333;
+  background-image: url('https://www.winhelponline.com/blog/wp-content/uploads/2017/12/user.png');
+  background-size: cover;
+  background-position: center;
+}
+.avatar .name {
+  font-size: 16px;
+  font-weight: 500;
+  margin-right: 5px;
+}
+.topbar .avatar:hover {
+  border: 2px solid #6a0985;
+  color: #6a0985;
+}
+
+.topbar .navs {
+  display: flex;
+  flex-direction: row;
+  margin: 0 10px;
+  align-items: center;
+}
+.topbar .navs .nav {
+  font-size: 28px;
+  margin: 0 5px;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  color: grey;
+}
+.topbar .navs .nav:hover {
+  color: #6a0985;
+}
+
+
+.sidenav .nav {
+  display: flex;
+  align-items: center;
+  padding: 20px 20px;
+  font-size: 20px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  outline: none;
+  outline: none;
+  text-decoration: none;
+}
+.sidenav .nav i {
+  font-size: 22px;
+  color: rgba(51, 51, 51, 0.6);
+  margin-right: 10px;
+  line-height: 22px;
+  transition-duration: 0.3s;
+}
+.sidenav .nav span {
+  line-height: 22px;
+  color: #6a0985;
+  font-weight: 500;
+  transition-duration: 0.3s;
+}
+.sidenav .nav:hover {
+  background-color: rgba(221, 221, 221, 0.6);
+}
+.sidenav .nav:hover span {
+  color: black;
+}
+.sidenav .nav:hover i {
+  color: #6a0985;
+}
+
+.activenav {
+  border-left: 5px solid #6a0985 !important;
+  background-color: rgba(221, 221, 221, 0.6);
+}
+.activenav2 {
+  color: #6a0985 !important;
+}
+
+
+
+.avatar .dropMenu {
+  position: absolute;
+  top: 50px;
+  right: -10px;
+  width: 240px;
+  transition-duration: 0.2s;
+  max-height: 0px;
+  overflow: hidden;
+}
+.showDrop {
+  display: block;
+  max-height: 500% !important;
+  z-index: 10000 !important;
+}
+
+.dropMenu .ctr {
+  border: 2px solid #6a0985;
+  border-radius: 10px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+.dropMenu .ctr a {
+  color: #6a0985;
+  font-weight: 500;
+  margin: 5px 0;
+  transition-duration: 0.1s;
+}
+.dropMenu .ctr a:hover {
+  color: #6a0985;
+  font-weight: 700;
+}
+.dropMenu .logout:hover {
+  color: crimson !important;
+}
+.dropactive {
+  border: 2px solid #6a0985 !important;
+  color: #6a0985 !important;
+}

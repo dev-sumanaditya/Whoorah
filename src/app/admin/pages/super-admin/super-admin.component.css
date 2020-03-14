@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+input {
+  width: 30%;
+  padding: 7px 10px;
+  margin-bottom: 10px;
+}
+
+button {
+  width: max-content;
+  padding: 7px 20px;
+  border-radius: 30px;
+  border: 1px solid rgb(128, 128, 128);
+  cursor: pointer;
+  margin: 10px 0 20px 0;
+  transition-duration: 0.3s;
+}
+button:hover {
+  background-color: rgba(137, 43, 226, 0.2);
+}

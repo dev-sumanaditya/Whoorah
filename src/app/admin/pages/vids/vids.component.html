@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="topbar">
+    <p>Select Video:</p>
+    <input type="file" id="myfile" class="btn" (change)="handleFileInput($event.target.files)" name="video">
+    <p>Select Cover Image:</p>
+    <input type="file" id="myfile" class="btn" (change)="handleFileInput($event.target.files)" name="video">
+    <p>Video Details:</p>
+    <input type="text" class="btn" placeholder="Name of the Video">
+    <input type="text" class="btn" placeholder="Youtube Link">
+    <textarea name="desc" class="btn" id="" cols="30" rows="6" placeholder="Video Description"></textarea>
+    <button class="btn2" type="submit">Upload Video</button>
+  </div>
+
+  <h2>Uploaded Videos</h2>
+  <div class="vids">
+    <div class="vid" *ngFor="let i of dummy">
+      <i class="fa fa-trash" aria-hidden="true"></i>
+    </div>
+  </div>
+</div>

@@ -9,7 +9,7 @@ import * as $ from 'jquery';
 })
 export class MainComponent implements OnInit {
 
-  public dummy = [1, 1, 1, 1, 1];
+  public dummy = [1,1,1,1];
 
   public bBoy = '0';
   public tMountain = '0';

@@ -37,6 +37,7 @@
 .navbar .brand {
   text-decoration: none;
   outline: none;
+  user-select: none;
 }
 .navbar .brand img {
   max-height: 60px;
@@ -51,6 +52,7 @@
   opacity: 1;
   transition-duration: 0.25s;
   outline: none;
+  user-select: none;
 }
 .navbar .menubutton i {
   font-size: 25px;
@@ -78,6 +80,7 @@
   font-weight: 600;
   transition-duration: 0.2s;
   outline: none;
+  user-select: none;
 }
 .navbar .nav:hover {
   color: rgb(106,9,133);

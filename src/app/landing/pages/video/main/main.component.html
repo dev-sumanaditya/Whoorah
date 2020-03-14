@@ -19,7 +19,7 @@
 
           <vg-fullscreen></vg-fullscreen>
         </vg-controls>
-        <video [vgMedia]="media" #media id="singleVideo" preload="auto" crossorigin>
+        <video [vgMedia]="media" #media id="singleVideo" preload="auto" crossorigin [poster]="'/src/assets/vd.jpg'">
           <source src="http://static.videogular.com/assets/videos/videogular.mp4" type="video/mp4">
         </video>
     </vg-player>
@@ -47,7 +47,7 @@
   </div>
 
   <div class="sliderContainer">
-    <h4>Keep Watching</h4>
+    <h4>Related Content</h4>
     <i class="fa fa-chevron-left navio nl" aria-hidden="true" (click)="slideBack()" *ngIf="slidePos !== 0"></i>
     <i class="fa fa-chevron-right navio nr" aria-hidden="true" (click)="slideNxt()" *ngIf="slidePos < slideLenght"></i>
     <div class="slider">

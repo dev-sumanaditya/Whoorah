@@ -6,7 +6,10 @@ const routes: Routes = [
   {path: '', component: PanelComponent, children: [
     {path: 'fun', loadChildren: './pages/fun/fun.module#FunModule'},
     {path: 'videos', loadChildren: './pages/video/video.module#VideoModule'},
-    {path: '', loadChildren: './pages/home/home.module#HomeModule'}
+    {path: '404', loadChildren: './pages/not-found/not-found.module#NotFoundModule'},
+    {path: '', pathMatch: 'full', loadChildren: './pages/home/home.module#HomeModule'},
+    {path: '**', redirectTo: '/404'},
+
   ]}
 ];
 

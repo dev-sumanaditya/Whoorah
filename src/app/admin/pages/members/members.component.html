@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="topbar">
+      <h4>Whoorah Members</h4>
+      <div class="spacer"></div>
+      <div class="btn" [class.btnActive]="ischanged" (click)="getSelectedRows(1)">Block</div>
+      <div class="btn" [class.btnActive]="ischanged" (click)="getSelectedRows(2)">Activate</div>
+      <div class="btn btnActive" (click)="onBtnExport()">Export CSV</div>
+  </div>
+  <div class="area">
+      <ag-grid-angular
+          #queries
+          style="width: 100%; height: 80vh;"
+          class="ag-theme-balham"
+          [rowData]="rowData"
+          [columnDefs]="columnDefs"
+          rowSelection="single"
+          (gridReady)="onGridReady($event)"
+          (selectionChanged)="changed()"
+          >
+      </ag-grid-angular>
+  </div>
+</div>

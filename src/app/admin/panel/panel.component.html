@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="topbar">
+    <a href="/admin" class="brand">Whoorah <span>Admin</span></a>
+    <div class="spacer"></div>
+    <div class="avatar" (click)="drop()" [class.dropactive]="dropdownStatus">
+      <div class="img"></div>
+      <div class="name">Lucky Dangi</div>
+      <i class="fa fa-angle-down" aria-hidden="true"></i>
+
+      <div class="dropMenu" [class.showDrop]="dropdownStatus">
+        <div class="ctr">
+          <a href="/admin/settings">Account Settings</a>
+          <a href="/admin/super">Super admin</a>
+          <a class="logout" href="">Logout</a>
+        </div>
+      </div>
+    </div>
+    <div class="navs">
+      <div class="nav" routerLink="/admin" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="activenav2"><i class="fa fa-cog" aria-hidden="true"></i></div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="sidenav">
+      <a class="nav" routerLink="/admin" [routerLinkActiveOptions]="{exact: true}"  routerLinkActive="activenav">
+        <i class="fa fa-th-large" aria-hidden="true"></i>
+        <span>Dashboard</span>
+      </a>
+      <a class="nav" routerLink="/admin/video" routerLinkActive="activenav">
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <span>Videos</span>
+      </a>
+      <a class="nav" routerLink="/admin/gif" routerLinkActive="activenav">
+        <i class="fa fa-check-circle" aria-hidden="true"></i>
+        <span>Gif's</span>
+      </a>
+      <a class="nav" routerLink="/admin/members"  routerLinkActive="activenav">
+        <i class="fa fa-users" aria-hidden="true"></i>
+        <span>Members</span>
+      </a>
+    </div>
+    <div class="content">
+      <div class="page">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>

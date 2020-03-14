@@ -63,11 +63,9 @@ export class MainComponent implements OnInit {
         this.backward();
         break;
       case 77:
-        e.preventDefault();
         this.mute();
         break;
       case 70:
-        e.preventDefault();
         this.fsapi.toggleFullscreen();
         break;
       case 18:
