@@ -30,8 +30,16 @@ export class MainComponent implements OnInit {
     'https://www.bestfunforall.com/wallpaperbetter/imgs/Nature%20Scenery%20wallpaper%20%201.jpg'
   ];
 
+  public showModal = false;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  show() {
+    this.showModal = true;
+  }
+  hide() {
+    this.showModal = false;
   }
 }
