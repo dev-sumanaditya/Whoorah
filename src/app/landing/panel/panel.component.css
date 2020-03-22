@@ -198,3 +198,115 @@
 .modal .ggl {
   background-color: #DD4B39;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Desktop */
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+}
+
+
+/* Tab */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+
+/* tab/cellphone */
+@media (min-width: 481px) and (max-width: 767px) {
+
+}
+
+/* Smartphone */
+@media (min-width: 320px) and (max-width: 480px) {
+
+  .colorDark {
+    color: #333 !important;
+    background-color: rgba(255, 255, 255, 0.99);
+    border-bottom: 1px solid #ddd;
+    padding: 5px 15px !important;
+  }
+  .colorDark img {
+    max-height: 40px !important;
+  }
+
+  .navbar {
+    padding: 10px 20px;
+  }
+  .navbar .brand img {
+    max-height: 40px;
+  }
+  .navbar .menubutton {
+    margin-left: 15px;
+  }
+  .navbar .menubutton i {
+    font-size: 18px;
+  }
+  .navbar .menubutton span {
+    font-size: 11px;
+  }
+
+  .navbar .menu {
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 15px;
+  }
+  .navbar .menu .nav {
+    margin: 0px 10px;
+    font-size: 16px;
+  }
+  .content {
+    min-height: 100vh;
+  }
+
+
+  .modal {
+    padding: 20px;
+  }
+  .modal .close {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+
+  .modal .page {
+    width: 80vw;
+    padding: 20px;
+  }
+  .modal .page h2 {
+    font-size: 16px;
+  }
+  .modal .page h1 {
+    font-size: 20px;
+  }
+  .modal .page h4 {
+    margin: 0 0 10px 0;
+  }
+  .modal .page input {
+    padding: 10px;
+  }
+  .modal .page button {
+    margin: 18px 0;
+  }
+  .modal .social i {
+    font-size: 18px;
+  }
+  .modal .fbi {
+    margin-top: 30px;
+  }
+}
