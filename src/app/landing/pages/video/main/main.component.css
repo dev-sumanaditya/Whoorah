@@ -108,3 +108,80 @@
 .nr {
   right: -35px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Desktop */
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+}
+
+
+/* Tab */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+
+/* tab/cellphone */
+@media (min-width: 481px) and (max-width: 767px) {
+
+}
+
+/* Smartphone */
+@media (min-width: 320px) and (max-width: 480px) {
+  .container {
+    padding: 60px 20px;
+  }
+  .info i {
+    font-size: 16px;
+    margin-left: 10px;
+  }
+  .info h2 {
+    font-size: 16px;
+  }
+  .des {
+    font-size: 12px;
+  }
+  .sliderContainer {
+    margin-top: 60px;
+    margin-bottom: 50px;
+  }
+  .slide .item {
+    height: 25vw;
+    width: 49%;
+    min-width: 49%;
+  }
+  .slide .overlay i {
+    font-size: 30px;
+  }
+
+  .navio {
+    font-size: 20px;
+    top: 58%;
+  }
+  .navio:hover {
+    color: #333;
+  }
+  .nl {
+    left: -18px;
+  }
+  .nr {
+    right: -18px;
+  }
+}

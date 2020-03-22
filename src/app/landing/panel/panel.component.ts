@@ -51,6 +51,7 @@ export class PanelComponent implements OnInit {
     if (event instanceof NavigationEnd) {
       setTimeout(() => {
         this.loading = false;
+        this.showMenu = false;
         console.log(this.loading);
         $('#loading').addClass('hide');
       }, 1000);

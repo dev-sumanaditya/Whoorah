@@ -62,3 +62,54 @@
   max-height: 70vh;
   max-width: 80vw;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Desktop */
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+}
+
+
+/* Tab */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+
+/* tab/cellphone */
+@media (min-width: 481px) and (max-width: 767px) {
+
+}
+
+/* Smartphone */
+@media (min-width: 320px) and (max-width: 480px) {
+  .container {
+    padding: 80px 10vw;
+  }
+  .image {
+    width: 25vw !important;
+    height: 25vw !important;
+    margin-bottom: 3vw;
+  }
+
+  .modal img {
+    min-height: 0px;
+    max-width: 100vw;
+    min-width: 90vw;
+  }
+}
