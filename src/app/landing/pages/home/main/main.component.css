@@ -32,7 +32,7 @@
 }
 
 #content h1 {
-  margin-bottom: 60vh;
+  margin-bottom: 40vh;
   font-size: 100px;
   color: #333;
   text-align: center;
@@ -44,9 +44,12 @@
 }
 
 
+.Lacquer h2 {
+  text-decoration: underline;
+}
 .b4 {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 .b4 .item {
   width: 300px;
