@@ -31,15 +31,39 @@ export class MainComponent implements OnInit {
   ];
 
   public showModal = false;
+  public image = '';
+
+  public loading = false;
+
   constructor() { }
 
   ngOnInit() {
   }
 
-  show() {
+  show(data) {
     this.showModal = true;
+    this.image = data;
   }
   hide() {
     this.showModal = false;
+    this.image = '';
+  }
+
+  onScroll() {
+    this.loading = true;
+    setTimeout(() => {
+      this.loading = false;
+      this.dummy.push(
+      'https://www.images.ch/wp-content/uploads/2018/10/17_Durand_INSITU_QuaiMariaBelgia_MathildaOlmi05_web-720x478.jpg',
+      'https://materializecss.com/images/sample-1.jpg',
+      'https://www.bestfunforall.com/wallpaperbetter/imgs/Nature%20Scenery%20wallpaper%20%201.jpg',
+      'https://resize.indiatvnews.com/en/resize/newbucket/715_-/2019/02/pjimage-1549524348.jpg',
+      'https://thumbs.dreamstime.com/t/horse-horizon-backlit-sunset-1798342.jpg',
+      'https://static-cdn.123rf.com/images/v5/index-thumbnail/84170952-b.jpg',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRlsXSYT4R3PoBUSswNAGxle_BvxILqLhFcD1cF9zsHtOdOZxpM',
+      'https://html5box.com/html5lightbox/images/lakeandballoon.jpg',
+      'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg',
+      );
+    }, 2000);
   }
 }

@@ -1,13 +1,22 @@
-<div class="container">
+<div class="container"
+infiniteScroll
+[infiniteScrollDistance]="0.1"
+[infiniteScrollThrottle]="800"
+(scrolled)="onScroll()"
+>
   <div class="images">
-    <div class="image" *ngFor="let i of dummy" [style.background]="'url('+ i + ')'" (click)="show()">
+    <div class="image" *ngFor="let i of dummy" [style.background]="'url('+ i + ')'" (click)="show(i)">
       <div class="overlay">
         <span>220 <i class="fa fa-eye" aria-hidden="true"></i></span>
       </div>
     </div>
   </div>
 
+  <div class="loading" style="height: 50px; text-align: center; padding-top: 35px;">
+    <i class="fa fa-spinner fa-spin" *ngIf="loading" style="font-size:36px;"></i>
+  </div>
+
   <div class="modal" *ngIf="showModal" (click)="hide()">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQlXZJsOJoReObL41j572FaQ9lNAtNWzsiYQRgL0vt8W1VDZpde" alt="">
+    <img src={{image}} alt="">
   </div>
 </div>
